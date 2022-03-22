@@ -1,0 +1,313 @@
+Question: What is Jenkins and why is it used?
+Answer: Jenkins is a continuous integration (CI) tool for real-time testing and reporting of smaller builds in a large chunk of code. It is written in Java. It is used because it helps developers and testers work in tandem to detect and close defects early in the software development lifecycle and encourage automated testing of builds.
+
+Question: List some features of Jenkins.
+Answer: Features of Jenkins are –
+
+Free and open source
+Excellent community and documentation
+Exhaustive set of plugins and integrations
+Easy to set up, install and use on any platform because it is based on Java
+Supports distributed builds due to master-slave architecture, thus reducing the load on the CI server
+Question: What are the advantages of using Jenkins?
+Answer: Advantages of Jenkins are –
+
+Provides great collaboration between development and operations team, making it into a single DevOps team
+Code errors can be detected as early as possible.
+Code deployment is easy and happens in minutes, along with the generation of reports.
+Automation of integration work, thereby reducing the number of integration issues.
+Question: How did Jenkins come into existence?
+Answer: Originally called Hudson, Jenkins came into existence when Oracle took over the ownership to continue development of the product, by renaming it as Jenkins.
+
+
+Question: How is continuous integration achieved using Jenkins?
+Answer: Here are the steps –
+
+All the developers commit their source code changes to the shared Git repository.
+Jenkins server checks the shared Git repository at specified intervals and detected changes are then taken into the build.
+The build results and test results are shared to the developers
+The built application is displayed on a test server like Selenium and automated tests are ran.
+The clean and tested build is deployed to the production server.
+Here is a diagram that clearly represents these steps –
+
+Question: Do you know any other continuous integration tools? How is Jenkins better than any of those?
+Answer: There are many other CI tools, the prominent ones being –
+
+TeamCity
+Bamboo
+Perforce
+Circle CI
+Go
+ThoughtWorks
+Integrity
+Travis CI
+There are many more. We cannot say if Jenkins is better than each because each have their own unique features. For example, TeamCity offers great .NET support but is complex and costly, Travis CI is free just like Jenkins and has good documentation too. Bamboo offers efficient and faster builds but is not completely free and so on.
+
+Question: What is DevOps and in which stage does Jenkins fit in?
+Answer: DevOps is a software development practice which blends software development (Dev) with the IT operations (Ops) making the whole development lifecycle simpler and shorter by constantly delivering builds, fixes, updates, and features. Jenkins plays a great role because it helps in this integration by automating the build, test and deployment process.
+
+Question: What are the system requirements to install Jenkins?
+Answer: The minimum configuration required is –
+
+256MB of RAM
+1 GB of drive space
+Java
+Web browser
+Question: How do you install Jenkins?
+Answer: To install Jenkins, make sure the following are installed –
+
+Java (version 8)
+Apache Tomcat (version 9)
+Download the Jenkins war file and deploy it using Tomcat. You can choose to install the plugins suggested by Jenkins during the installation itself. Once the installation is done, you will be able to see the Jenkins dashboard.
+
+Question: Give some important plugins in Jenkins.
+Answer: Here you go –
+
+Maven 2
+Gits
+Amazon EC2
+Join
+Copy artifact
+Green Balls
+HTML Publisher
+Question: What is Groovy?
+Answer: Groovy from Apache is a language for Java platform. It is the native scripting language for Jenkins. Groovy-based plugins enhance Jenkins with great interfaces and build reports that are dynamic and consistent.
+
+Question: Give a simple use case/scenario to explain how Jenkins works.
+Answer:
+
+Let us say a developer is working on some code changes and eventually commits them to the repository.
+Jenkins server, which constantly checks for changes in the repository, detects the change and pulls the changes to trigger a build.
+The build can fail, in which case the developer is informed with reports.
+If the build passes, it is deployed on to the test server.
+Once the testing is complete, a test report is generated and sent to the developers. This process continues till all the tests are successful, after which code is deployed to production.
+Question: Can you start Jenkins using command line? How?
+Answer: Yes, using jenkins.exe start
+
+Question: What are the SCM tools that Jenkins supports?
+Answer: The SCM or Source Code Management tools Jenkins supports are SVN, Clearcase, CVS, Git, AccuRev, Perforce, RTC, Mercurial.
+
+Question: What is a job in Jenkins?
+Answer: A job or build job is a task or step in the entire build process. It could be compiling the source code, running unit tests, deploying the application to the web server and so on.
+
+Question: How can you create a job?
+Answer: On the dashboard page, you can just select a ‘New Job’. When you create a job, you can choose options such as the SCM, triggers to control, the build script and notifications.
+
+Question: What is meant by Jenkins pipeline?
+Answer: A pipeline is a group of interlinked jobs done one after the other in a sequence. To integrate and implement continuous delivery pipelines, Jenkins pipelines provides a combination of plugins. The instructions to be performed are given through code. A continuous delivery pipeline can be represented as –
+
+Question: What are the types of pipelines in Jenkins?
+Answer: There are 3 types –
+
+CI CD pipeline (Continuous Integration Continuous Delivery)
+Scripted pipeline
+Declarative pipeline
+Question: What syntax does Jenkins use to schedule build job or SVN polling?
+Answer: The cron syntax.
+
+Cron syntax is represented using five asterisks each separated by a space. The syntax is as follows – [minutes] [hours] [day of the month] [month] [day of the week]. Example, if you want to set up a cron for every Monday at 11.59 pm, it would be
+
+59 11 * * 1
+
+
+
+Question: Have you created a build job in Jenkins? Explain how to do it.
+Answer: Yes. The simple steps are –
+
+Click on New Item on the Dashboard.
+Select the freestyle project option
+Specify the details of the job like SCM, build triggers, advanced options etc…
+It is important to specify the location of files that should be built.
+Once all the settings are marked, click on ‘Add build step’ and select the appropriate option. For example, if you want to build a file, select the file name along with the build command.
+Click on Build now for saving the build and doing a test run.
+Question: How does Jenkins authenticate users?
+Answer: There are 3 ways –
+
+The default way is to store user data and credentials in an internal database.
+Configure Jenkins to use the authentication mechanism defined by the application server on which it is deployed.
+Configure Jenkins to authenticate against LDAP server.
+Question: How can you use a third-party tool in Jenkins?
+Answer: Let us say we want to use the third-party tool Node.
+
+First make sure Node is installed.
+Though the Jenkins admin console, install the Jenkins plugin for node.
+Go to manage in the admin console and configure the settings on the Tools tab.
+You can add any configured nodeJS tool to your build job in a pipeline
+For different third-party tools, the procedure may vary slightly, because of the difference in configuration settings.
+
+Question: Explain the Difference between Jenkins and Bamboo?
+Answer:
+
+
+
+Jenkins	Bamboo
+Open-source tool.	Commercial tool.
+Supported by a huge global community.	Has its own dedicated development team.
+Less user-friendly compared to Bamboo.	More user-friendly features.
+Has many plugins to perform various functions.	Most features are built-in, and plugins are also available on the Atlassian marketplace.
+Question: What is the process of Jenkins?
+Answer: Jenkins automates the complete continuous deployment and delivery process through plugins. The process is as follows:
+
+Developers commit various source code changes to the Git repository.
+The Jenkins server keeps checking for repository changes and for every check-in, a build is done.
+Jenkins then deploys the built application to the test server (like Selenium). The test results are sent back as a feedback.
+Once all the tests are performed on the test server, the code is built on the production server.
+The feedback is again sent to the developer through the various levels (test server, Jenkins server, Git repo).
+Process of Jenkins
+
+Question: What are the various benefits of Jenkins?
+Answer: There are many benefits of Jenkins:
+
+Free and open-source tool with wide community support.
+Easy to install and configure.
+Portable to all the major platforms as it is built on Java.
+Has many plugins for different tasks. If any plugin is not there, then developers can code it and contribute the same to the community.
+Highly customizable.
+Enables high-speed software development.
+Question: Describe the process to create a backup and copy files in Jenkins?
+Answer: To create a backup, you should periodically back up your JENKINS_HOME directory.
+
+This directory contains all the build jobs configurations, slave node configurations, and build history.
+
+To create a backup, copy this directory, or you can also copy a job directory to replicate any job or rename the directory.
+
+Question: Explain DSL Jenkins?
+Answer: Jenkins DSL (Domain Specific Language) is a plugin through which jobs can be defined in a programmatic manner which is human readable. Through this plugin, the UI configurations are intuitively translated into code. That way, you can create a version for the job and also maintain the history of the changes. The converted code is in a Groovy-based language. Example,
+
+if you have a parameter definition as below in the config.xml file:
+
+<hudson.model.StringParameterDefinition>
+ <name>MESSAGE</name>
+ <defaultValue>Welcome to Hackr.io</defaultValue>
+</hudson.model.StringParameterDefinition>
+The corresponding code will look like:
+parameters {
+ stringParam('MESSAGE', 'Welcome to Hackr.io')
+}
+Question: Explain the process of creating the Multibranch Pipeline in Jenkins?
+Answer: The process is as follows:
+
+Open the Jenkins dashboard and create a new item by clicking on ‘new item’ from the top left menu.
+Enter your project name and from the options shown, select ‘Multibranch pipeline’ and click on OK.
+Then you should select the repository location, branch source (GitHub/Bitbucket), and add the credentials of the branch source.
+Save the project.
+Jenkins automatically creates new Multibranch Pipelines for repositories that have branches and pulls requests containing Jenkins files.
+To connect to the GitHub repo, we need the HookURL. Get this URL from the repository settings.
+Add this HookURL to the Webhooks section.
+Once the jobs are created, build is automatically triggered by Jenkins.
+Question: Explain the blue ocean in Jenkins.
+Answer: Blue ocean is a modern UI for Jenkins, which helps in a personalized experience with modern design. Through this interface, any user can create, diagnose and visualize Continuous Delivery pipelines. It doesn’t need technical skills to create or understand the pipelines as everything is visually presented. Also, detection of automation problems is easy as each step can be easily navigated.
+
+Question: Describe Continuous testing.
+Answer: In continuous testing, feedback is received at each stage of the continuous delivery pipeline. It helps to improve code quality by running the automated test cases over and again. It also reduces the code and testing cycles, ensuring stable builds are available in less time, thus optimizing the testing process.
+
+
+
+Question: Explain the process to integrate Git with Jenkins?
+Answer: Here are the steps to integrate Git with Jenkins:
+
+Create a new Jenkins job and open the Jenkins dashboard.
+Enter the project name (in the item name) and select the job type. Click on OK.
+Enter the project information. Go to the ‘Source Code Management’ tab. If the Git plugin is already installed in Jenkins, you will see the option ‘Git’.
+If you cannot see it, then you should reinstall the plugins – GitHub plugin, GitHub Branch Source plugin, GitHub API plugin, Gitclient plugin etc.
+After installing the plugins, restart Jenkins to reflect the changes.
+To pull the code from GitHub, enter the repository URL. If you do not have Git installed in your machine, install it. To check if Git is installed, type Git in cmd (command prompt) and you should see various options like usage, version, help etc.
+Question: Create a workflow for Continuous Delivery Workflow.
+Answer: To create a CD workflow, we have to first create a branch. All the coding, testing and code changes are done in the branch. The branch changes are then merged and delivered once the testing is complete.
+
+workflow for Continuous Delivery Workflow
+
+Question: Explain the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?
+Answer: Continuous integration: It is the process of constantly integrating the changes into the main software during all the stages of the delivery pipeline, once the changes are tested on the test environment. CI can also be referred to as the work done by the Jenkins or Bamboo server.
+
+Continuous delivery: It is the delivery of code (shipping) to a particular environment like test, integration or production through a manual release.
+
+Continuous deployment: It is the automatic release of code into the staging or production environment, once the testing is done in the CI stage.
+
+Question: What is Pipeline as a Code in Jenkins? Explain various types of Pipeline?
+Answer: Pipeline-as-a-code is a technique or set of features that help you maintain the CI/CD workflow logic in the source code repository without any additional configurations for each Jenkins branch. This is applicable for projects that have a file named as Jenkinsfile in the root folder of the repo (containing a pipeline script). The types of pipeline syntax are declarative and syntax.
+
+Declarative: These provide an easy way for creating pipelines and has a predefined hierarchy to create Jenkins pipelines. You can control all the aspects of the Pipeline.
+Scripted: It runs on the Jenkins master through a lightweight executor and uses few resources for translating the Pipeline into code (commands).
+Question: What is Agent Directive in Jenkins?
+Answer: The agent directive directs Jenkins on how and where to execute the Pipeline or its subsets. All the pipelines require agents. The agent causes a workspace to be allocated that contains checkout files from source control and other additional working files required for the Pipeline. It also causes the steps required for execution to be executed by Jenkins when an executor is available.
+
+Question: Explain the difference between Maven, Ant, and Jenkins?
+Answer: Jenkins is a CI tool, whereas Ant and Maven are build tools. Jenkins provides a trigger for the build to be executed. Maven and Ant can only perform build operations; however, Jenkins can run unit tests, deploy applications automatically.
+
+Between Ant and Maven, Ant is just a tool and is procedural, whereas Maven is a complete declarative framework and has a lifecycle. Ant scripts cannot be reused, but Maven plugins can be reused. Ant is an old tool used by legacy systems. Most new applications use Maven.
+
+Question: Explain the process of setting up a Jenkins job?
+Answer: Jenkins handles project builds through jobs. To set up a job, you should follow a few steps:
+
+
+
+Select a new item, and enter the name of the job.
+Select freestyle project and press OK.
+Enter the job description and configure the number of builds and time for which they should be retained.
+Configure the repository (Example Git). Enter the URL and credentials.
+Specify the build triggers.
+Save the job.
+Validate the job by clicking on ‘Build Now’.
+Question: How to secure Jenkins?
+Answer: We can secure Jenkins and configure global security through the following:
+
+Deploy Jenkins.war file to the server and start it.
+From the homepage (through URL), click on Manage Jenkins.
+On this page, click on the ‘Setup Security’ button.
+Check the ‘Enable Security’ checkbox.
+It is a good practice to have your own database for security. Select this option in the ‘Security Realm’ and check the ‘Allow users to sign up’ checkbox.
+Fill the signup form. Once the signup is successful, you can log in with the new account.
+Next, go to Manage Jenkins and ‘Configure Global Security’. Now, uncheck the ‘Allow users to sign up’ checkbox. This way, no new users can be created without permission.
+Now, you can configure the account authentication. There are two strategies: Matrix-based security&Project-based project authorization strategy. You can select the one which is suitable for you.
+Save the form and logout and then login with the new account.
+Question: What is an agent?
+Answer: The agent specifies the execution point for a particular stage in the pipeline or the entire pipeline itself.
+
+Question: How do you define parameters in Jenkins?
+Answer: A build can take several input parameters to execute. For example, if you have multiple test suites, but you want to run only one. You can set a parameter to decide which one should be run. To have parameters in a job, you need to specify the same while defining the parameter. The parameter can be a string, file or custom.
+
+Question: What are the ways to configure Jenkins node agent to communicate with Jenkins master?
+Answer: There are 2 ways to start the node agent –
+
+Browser – if Jenkins node agent is launched from a browser, a JNLP (Java Web Start) file is downloaded. This file launches a new process on the client machine to run jobs.
+Command line – to start the node agent using the command line, the client needs the executable agent.jar file. When this file is run, it launches a process on the client to communicate with the Jenkins master to run build jobs.
+Question: What is a trigger? Give an example of how the repository is polled when a new commit is detected.
+Answer: Triggers define when and how pipelines should be executed.
+
+When Jenkins is integrated with an SCM, for example, Git, the repository can be polled every time there is a commit.
+
+The Git plugin should be first installed and set up.
+After that, you can build a trigger that specifies when a new build should be started. For example, you can create a job that polls the repository and triggers a build when a change is committed.
+Question: What is the use of JENKINS_HOME directory?
+Answer: All the settings, logs and configurations are stored in the JENKINS_HOME directory.
+
+Question: What is a backup plugin? Why is it used?
+Answer: This is a useful plugin that backs up all the critical settings and configurations to be used in the future. This is especially useful when there is a failure so that we don’t lose the settings.
+
+Question: If your project build is broken, what should you do?
+Answer: There are 2 ways to resolve a broken build –
+
+Open the console and double check if all the files are taken. If any changes are missing, place them correctly.
+Replicate the problem on your local set up to debug and fix the issue.
+Question: Let us say, you have a pipeline. The first job was successful, but the second failed. What should you do next?
+Answer: You can restart the pipeline from the point where it failed by doing ‘restart from stage’.
+
+Question: How do you move or copy Jenkins from an old server to a new one?
+Answer: All the configurations, settings are stored in the JENKINS_HOME (/var/lib/Jenkins) directory. You should copy the entire home directory to the new server. To do so, you can use the command ‘rsync’.
+
+Question: What is the Git plugin?
+Answer: Git plugin is used when you are using Git as the repository.
+
+Question: What is Maven? What is the benefit of integrating maven with Jenkins?
+Answer: Maven is a build management tool. Using a simple pom.xml, one can configure all the dependencies needed to build, test and run the code. Maven manages the full lifecycle of a test project. Once integrated with Jenkins, the maven Webdriver will build the project and execute all tests efficiently.
+
+Question: Have you run automated tests on Jenkins? How is it done?
+Answer: Yes. Automated tests can be run through tools like Selenium or maven. Developers can schedule the test runs. Jenkins displays the test results and sends a report to the developers.
+
+Question: What is Kubernetes? How can you integrate Jenkins with Kubernetes?
+Answer: Kubernetes is a container orchestration tool. With Kubernetes, one can create multiple container instances to achieve more fault tolerance. You can use the Kubernetes deploy plugin to use it with Jenkins for continuous deploy.
+
+Question: Do you know about cloud computing? How can Jenkins fit into a cloud computing environment? Explain with an example.
+Answer: Let us take the example of AWS cloud service. Cloud computing services use the CI/CD model so that they can push their work to the customers and constantly receive feedback. Jenkins is used to automating the CI/CD pipelines. For example, a lot of Jenkins plugins are available for many of the AWS services like Amazon EC2 and ECS.
+
